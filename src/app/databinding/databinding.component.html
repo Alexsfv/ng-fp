@@ -1,0 +1,26 @@
+<div>
+  <h1>Interpolation string and number</h1>
+  <p>
+    <u>{{ bindingString }} || {{ bindingNumber }}</u>
+  </p>
+
+  <hr/>
+
+  <h1>Binding input value</h1>
+  <input type="text" [value]="bindingString" />
+
+  <hr/>
+
+  <h1>Styling by Class and Style attribute</h1>
+
+  <p [ngClass]="{redBorder: onClass()}">some text class</p>
+  <p [ngStyle]="{border: '1px solid blue'}">some text style</p>
+
+  <hr/>
+  <h1>Binding props</h1>
+  <fa-property-binding [result]="564"></fa-property-binding>
+
+  <hr/>
+  <h1>Binding Events</h1>
+  <fa-event-binding (clickable)="onClick($event)"></fa-event-binding>
+</div>
