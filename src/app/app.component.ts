@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Edited my first Angular app :)';
+  showCycleComponent = true
 }

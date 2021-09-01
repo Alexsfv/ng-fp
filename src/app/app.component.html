@@ -1,5 +1,9 @@
 <h1>
   App title: {{title}}
-
-  <fa-databinding></fa-databinding>
+  <button (click)="showCycleComponent = !showCycleComponent">
+    toggle
+  </button>
+  {{showCycleComponent}}
+  <fa-lifecycles *ngIf="showCycleComponent"></fa-lifecycles>
+  <!-- <fa-databinding></fa-databinding> -->
 </h1>
