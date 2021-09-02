@@ -8,19 +8,32 @@ import {
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked,
+  Input,
 
 } from '@angular/core';
 
 @Component({
   selector: 'fa-lifecycles',
   template: `
-    <p>
-      lifecycles Works!
-    </p>
+    <div>
+      <div>
+        <p>Content: </p>
+        <ng-content></ng-content>
+      </div>
+      <div>
+        <p>Property: </p>
+        <div>{{text}}</div>
+      </div>
+    </div>
   `,
-  styles: []
+  styles: [`
+    div {
+      border: 2px solid green;
+    }
+  `]
 })
 export class LifecyclesComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+  @Input() text: string = ''
 
   constructor() { }
 

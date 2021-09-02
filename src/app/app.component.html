@@ -1,9 +1,19 @@
 <h1>
   App title: {{title}}
-  <button (click)="showCycleComponent = !showCycleComponent">
-    toggle
-  </button>
+  <div>
+    <button (click)="showCycleComponent = !showCycleComponent">
+      toggle
+    </button>
+    <button (click)="updateCycleContent()">
+      random cycle CONTENT
+    </button>
+    <button (click)="updateCycleProp()">
+      random cycle PROPERTY
+    </button>
+  </div>
   {{showCycleComponent}}
-  <fa-lifecycles *ngIf="showCycleComponent"></fa-lifecycles>
+  <fa-lifecycles *ngIf="showCycleComponent" [text]="cycleProp">
+    {{cycleContent}}
+  </fa-lifecycles>
   <!-- <fa-databinding></fa-databinding> -->
 </h1>

@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Edited my first Angular app :)';
   showCycleComponent = true
+  cycleContent = Math.random()
+  cycleProp = Math.random()
+
+  updateCycleContent = () => {
+    this.cycleContent = Math.random()
+  }
+
+  updateCycleProp = () => {
+    this.cycleProp = Math.random()
+  }
 }
