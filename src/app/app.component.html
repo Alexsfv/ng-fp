@@ -13,7 +13,8 @@
   </div>
   {{showCycleComponent}}
   <fa-lifecycles *ngIf="showCycleComponent" [text]="cycleProp">
-    {{cycleContent}}
+    <p #boundContent>
+      {{cycleContent}}
+    </p>
   </fa-lifecycles>
-  <!-- <fa-databinding></fa-databinding> -->
 </h1>
